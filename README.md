@@ -27,7 +27,8 @@
 
 ### Data Structure & Algorithm
 **JAVA 자료구조, 알고리즘**
-- [Java Algorithm]()
+- [Java Data Structure](/DataStructureAndAlgorithm/JavaDataStructure/JavaDataStructure.md)
+- [Java Algorithm](./DataStructureAndAlgorithm/JavaAlgorithm/JavaAlgorithm.md)
 
 [*Back to Contents*](#contents)
 
