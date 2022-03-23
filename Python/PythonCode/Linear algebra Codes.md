@@ -1,4 +1,8 @@
 # Linear Algebra Codes
+
+> 네이버 부스트코스 '머신러닝을 위한 파이썬' 강의 내용 정리
+
+## Linear Algebra Codes
 - 파이썬으로 벡터, 행렬 구현
 - 넘파이가 사실 제일 편함
 
