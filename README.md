@@ -7,6 +7,10 @@
 - [Data Structure & Algorithm](#data-structure--algorithm)
 - [SQL](#sql)
 
+<br>
+
+<hr />
+
 ### Python
 **Python Code**
 - [람다(Lambda) & map, reduce](./Python/PythonCode/%EB%9E%8C%EB%8B%A4(Lambda).md)
@@ -18,7 +22,11 @@
 - 코딩 도장
 - [신비한 파이썬 프로젝트](./Python/도서/%EC%8B%A0%EB%B9%84%ED%95%9C%20%ED%8C%8C%EC%9D%B4%EC%8D%AC%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/%EC%8B%A0%EB%B9%84%ED%95%9C%20%ED%8C%8C%EC%9D%B4%EC%8D%AC%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8.md)
 
+<br>
+
 [*Back to Contents*](#contents)
+
+<hr />
 
 ### Data Science
 - ㅇ
@@ -30,7 +38,11 @@
 - [Java Data Structure](/DataStructureAndAlgorithm/JavaDataStructure/JavaDataStructure.md)
 - [Java Algorithm](./DataStructureAndAlgorithm/JavaAlgorithm/JavaAlgorithm.md)
 
+<br>
+
 [*Back to Contents*](#contents)
+
+<hr />
 
 ### SQL
 
@@ -47,5 +59,7 @@
 - [LEVEL 1](./SQL/프로그래머스%20문제풀이/Level_1.md)
 - [LEVEL 2](./SQL/프로그래머스%20문제풀이/Level_2.md)
 - [LEVEL 3](./SQL/프로그래머스%20문제풀이/Level_3.md)
+
+<br>
 
 [*Back to Contents*](#contents)
