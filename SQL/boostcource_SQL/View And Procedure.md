@@ -1,0 +1,116 @@
+# View And Procedure
+
+## VIEW
+- 하나 이상의 테이블들을 화영하여, 사용자가 정의한 **가상 테이블**이다
+- JOIN 사용을 최소화하여, 편의성을 높힌다
+- 중복되는 열이 저장될 수 없다
+
+```sql
+-- VIEW 생성
+CREATE VIEW SALES_PRODUCT AS
+
+SELECT A.*,
+       A.SALES_QTY * B.PRICE AS 결제금액
+FROM   SALES AS A
+LEFT
+JOIN   PRODUCT AS B
+ON     A.PRODUCT_CODE = B.PRODUCT_CODE;
+
+-- 조회 하기
+SELECT *
+FROM SALES_PRODUCT;
+
+-- VIEW 수정
+
+ALTER VIEW SALES_PRODUCT AS
+
+SELECT A.*,
+       A.SALES_QTY * B.PRICE *1.1 AS 결제금액_수수료포함
+FROM   SALES AS A
+LEFT
+JOIN   PRODUCT AS B
+ON     A.PRODUCT_CODE = B.PRODUCT_CODE;
+
+
+-- VIEW 삭제
+DROP VIEW SALES_PRODUCT;
+```
+
+## PROCEDURE
+- **매개변수**를 활용해, 사용자가 정의한 작업을 저장
+```sql
+DELIMITER //
+CREATE PROCEDURE [PROCEDURE명] (IN 매개변수 매개변수명 데이터타입)
+BEGIN
+    SELECT *
+    FROM CUSTOMER
+    WHERE 조건 = 매개변수
+END
+DELIMITER ;
+```
+- `DELIMITER` 는 여러 명령어들을 하나로 묶어줄 때 사용
+### 매개변수
+- `IN` : 매개 변수를 PROCEDURE로 전달
+- `OUT` :  PROCEDURE 결과값 반환
+- `INOUT` : 매개 변수를 PROCEDURE로 전달하고 결과값 반환
+
+### IN 생성 예시
+```sql
+DELIMITER //
+CREATE PROCEDURE CST_GEN_ADDR_IN (IN INPUT_A VARCHAR(20), INPUT_B VARCHAR(20))
+BEGIN
+    SELECT *
+    FROM CUSTOMER
+    WHERE GENDER = INPUT_A
+    AND ADDR = INPUT_B;
+END //
+DELIMITER ;
+```
+
+### OUT 생성 예시
+```sql
+DELIMITER //
+CREATE PROCEDURE CST_GEN_ADDR_I_CNT_MEM_OUT
+                (IN INPUT_A VARCHAR(20), INPUT_B VARCHAR(20),
+                 OUT CNT_MEM INT )
+BEGIN
+    SELECT COUNT(MEM_NO)
+    INTO CNT_MEM
+    FROM CUSTOMER
+    WHERE GENDER = INPUT_A
+    AND ADDR = INPUT_B;
+END //
+DELIMITER ;
+```
+
+### IN / OUT 생성 예시
+```sql
+DELIMITER //
+CREATE PROCEDURE IN_OUT_PARAMETER (INOUT COUNT INT)
+BEGIN
+    SET COUNT = COUNT + 10;
+END //
+DELIMITER ;
+```
+
+### PROCEDURE 실행
+```sql
+-- IN
+CALL CST_GEN_ADDR_IN('MAN', 'SEOUL');
+CALL CST_GEN_ADDR_IN('WOMAN', 'INCHEON');
+
+-- OUT
+CALL CST_GEN_ADDR_I_CNT_MEM_OUT('WOMAN','INCHEON', %CNT_MEM);
+SELECT @CNT_MEM;
+
+-- INOUT
+SET @counter = 1;
+CALL IN_OUT_PARAMETER(@counter);
+SELECT @counter;
+```
+
+### PROCEDURE 삭제
+```sql
+-- PROCEDURE 삭제
+DROP PROCEDURE CST_GEN_ADDR_IN;
+```
