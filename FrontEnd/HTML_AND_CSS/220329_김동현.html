@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play2048</title>
+    <style>
+        /* https://play2048.co/ 를 참고 */
+        body {
+            background-color: beige;
+        }
+        .button {
+            border-radius: 5%;
+            padding: 5px;
+        }
+        .brown_button {
+            position: fixed;
+            right: 0;
+            font-size: 13px;
+            font-weight: bold;
+            padding: 5px;
+            background-color: rgb(175, 150, 150);
+            color: whitesmoke;
+        }
+
+
+        .score_button {
+            font-size: 13px;
+            font-weight: bold;
+            padding: 5px;
+            background-color: rgb(175, 150, 150);
+            color: whitesmoke;
+            height: 50px;
+            width: 50px;
+            margin: 5px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .title {
+            font-size: 45px;
+            margin-right: 60px;
+            color: rgb(122, 104, 104);
+        }
+
+        .title_And_Score {
+            display: flex;
+            justify-content: center;
+        }
+
+        .how_to_play {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .new_game_btn {
+            font-size: 13px;
+            font-weight: bold;
+            padding: 5px;
+            background-color: hsl(0, 8%, 51%);
+            color: whitesmoke;
+            height: 20px;
+            width: 100px;
+            margin: 5px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .text {
+            font-size: 13px;
+            color: rgb(122, 104, 104);
+        }
+
+        .game_stage {
+            margin: auto;
+            margin-top: 50px;
+            background-color:rgb(122, 104, 104);
+            width: 400px;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            align-content : space-around;
+            justify-content: center;
+        }
+        .game_row {
+            display: flex;
+            justify-content : space-around;
+            padding: 10px;
+        }
+        
+        .game_btn {
+            height: 50px;
+            width: 50px;
+            background-color: beige;
+            text-align: center;
+            font-weight: bolder;
+            font-size: 20px;
+        }
+
+        .sideAD_right {
+            position: fixed;
+            right: 0;
+        }
+
+        .sideAD_left {
+            position: fixed;
+            left: 0;
+        }
+
+        .sideAD {
+            font-size: 10px;
+            top: 50px;
+            background-color: white;
+            height: 600px;
+            width: 100px;
+        }
+        .under_text {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a class="button brown_button" href="https://play2048.co/">Send Feedback</a>
+    </header>
+    <section class="title_And_Score">
+        <h1 class="title">2048</h1>
+        <div class="button score_button">
+            <div >SCORE</div>
+            <div>0</div>
+        </div>
+        <div class="button score_button">
+            <div>BEST</div>
+            <div>0</div>
+        </div>
+    </section>
+    <section class="how_to_play">
+        <div class="text">Join the tiles, get to <b>2048!</b><br> <b><a href="https://play2048.co/">How to play</a> -></b> </div>
+        <a class="button new_game_btn" href="https://play2048.co/">New Game</a>
+    </section>
+    
+    <section class="button game_stage">
+        <div class="game_row">
+            <div class="button game_btn">1</div>
+            <div class="button game_btn">2</div>
+            <div class="button game_btn">4</div>
+            <div class="button game_btn">8</div>
+        </div>
+        <div class="game_row">
+            <div class="button game_btn">2</div>
+            <div class="button game_btn">4</div>
+            <div class="button game_btn">8</div>
+            <div class="button game_btn">16</div>
+        </div>
+        <div class="game_row">
+            <div class="button game_btn">1</div>
+            <div class="button game_btn">2</div>
+            <div class="button game_btn">4</div>
+            <div class="button game_btn">8</div>
+        </div>
+        <div class="game_row">
+            <div class="button game_btn">1</div>
+            <div class="button game_btn">2</div>
+            <div class="button game_btn">4</div>
+            <div class="button game_btn">8</div>
+        </div>
+    </section>
+    <div class="sideAD sideAD_right">
+        광고 문의<br>
+        (010-1111-1111)
+    </div>
+
+    <div class="sideAD sideAD_left">
+        광고 문의<br>
+        (010-1111-1111)
+    </div>
+
+    <div class="text under_text">
+        <b>HOW TO PLAY:</b> Use your <b>arrow keys</b> to move the tiles. <br>
+        Tiles with the same number <b>merge into one</b> when they touch. <br>
+        Add them up to reach 2048!
+        <b><a href="https://play2048.co/">Start playing →</a><b>
+    </div>
+</body>
+</html>
