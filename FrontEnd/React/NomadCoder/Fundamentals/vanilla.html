@@ -1,0 +1,18 @@
+<!-- 버튼을 클릭한 횟수를 알려주는 간단한 어플 -->
+<!DOCTYPE html>
+<html>
+<body>
+    <span>Total click: 0</span>
+    <button id="btn">click me</button>
+</body>
+<script>
+    let counter = 0;
+    const button = document.getElementById("btn");
+    const span = document.querySelector("span");
+    function handleClick() {
+        counter += 1;
+        span.innerText = `Total clicks: ${counter}`;
+    }
+    button.addEventListener("click",handleClick);
+</script>
+</html>
