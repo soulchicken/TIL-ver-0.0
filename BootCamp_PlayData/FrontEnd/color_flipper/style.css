@@ -1,0 +1,38 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+/* reset.css : 기본 css 스타일 초기화 */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* style.css */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh; /* viewport height 의 60% */
+}
+
+.container {
+    text-align: center; /* tac 타이핑하고 tab 하면 바로 생성됨 */
+}
+
+.container h2 {
+    color : white;
+    background-color: #000;
+    padding: 1rem;
+    letter-spacing: 0.1rem;
+}
+
+.btn {
+    border: 2px dashed black;
+    font-family: inherit; /* 부모 속성을 이어 받는다. (상속받는다.) */
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    background-color: transparent;
+    padding: 0.5rem 0.75rem;
+}
