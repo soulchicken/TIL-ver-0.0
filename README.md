@@ -86,14 +86,19 @@
 
 ### BootCamp - PlayData
 **HTML**
-- [부트캠프 수업 정리 (22.03.28)](./FrontEnd/HTML_AND_CSS/220328_01_HTML.md) : HTML 전체적으로 훑은 날
+- [부트캠프 수업 정리 (22.03.28)](./BootCamp_PlayData/FrontEnd/220328_01_HTML.md) : HTML 전체적으로 훑은 날
 
 **CSS**
-- [부트캠프 수업 정리 (22.03.28)](./FrontEnd/HTML_AND_CSS/220328_02_CSS.md) : CSS 전체적으로 훑은 날
-- [부트캠프 수업 정리 (22.03.29)](./FrontEnd/HTML_AND_CSS/220329_01_CSS.md) : 박스모델링, float, flex가 기억에 남는 날
+- [부트캠프 수업 정리 (22.03.28)](./BootCamp_PlayData/FrontEnd/220328_02_CSS.md) : CSS 전체적으로 훑은 날
+- [부트캠프 수업 정리 (22.03.29)](./BootCamp_PlayData/FrontEnd/220329_01_CSS.md) : 박스모델링, float, flex가 기억에 남는 날
 
 **JavaScript**
-- [부트캠프 수업 정리 (22.03.30)](./FrontEnd/HTML_AND_CSS/220330_01_JS.md) : 변수 선언부터 반복문, 조건문까지
+- [부트캠프 수업 정리 (22.03.30)](./BootCamp_PlayData/FrontEnd/220330_01_JS.md) : 변수 선언부터 반복문, 조건문까지
+- [부트캠프 수업 정리 (22.03.31)](./BootCamp_PlayData/FrontEnd/220331_01_JS.md) : 함수, 배열, 문자열 등등 날
+- [부트캠프 수업 정리 (22.04.01)](./BootCamp_PlayData/FrontEnd/220401_01_JS.md) : 객체, 이벤트, DOM 심화
+
+**알고리즘 스터디**
+- [기초 알고리즘 1](./BootCamp_PlayData/AlgorithmStudy/foundation_1/foundation_1.md)
 <br>
 
 [*Back to Contents*](#contents)
