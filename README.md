@@ -96,6 +96,10 @@
 - [부트캠프 수업 정리 (22.03.30)](./BootCamp_PlayData/FrontEnd/220330_01_JS.md) : 변수 선언부터 반복문, 조건문까지
 - [부트캠프 수업 정리 (22.03.31)](./BootCamp_PlayData/FrontEnd/220331_01_JS.md) : 함수, 배열, 문자열 등등 날
 - [부트캠프 수업 정리 (22.04.01)](./BootCamp_PlayData/FrontEnd/220401_01_JS.md) : 객체, 이벤트, DOM 심화
+- [부트캠프 수업 정리 (22.04.04)](./BootCamp_PlayData/FrontEnd/220404_01_JS.md) : 새로운 강사님. 먼가 업그레이드 된 듯한 자바스크립트
+- [부트캠프 수업 정리 (22.04.05)](./BootCamp_PlayData/FrontEnd/220405_01_JS.md) : 자바스크립트가 정말 많이 익숙해지고 있다.
+- [미니 프로젝트 - Counter 설명서](https://github.com/soulchicken/WEB_collection#readme) : 미니프로젝트 Readme 작성
+- [미니 프로젝트 - Counter 링크 (22.04.05)](https://soulchicken.github.io/WEB_collection/) : 미니 프로젝트. 난잡하게 만드는 것보다 심플하게 만드는 것이 이쁘다.
 
 **알고리즘 스터디**
 - [기초 알고리즘 1](./BootCamp_PlayData/AlgorithmStudy/foundation_1/foundation_1.md)
