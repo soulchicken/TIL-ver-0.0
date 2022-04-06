@@ -27,20 +27,20 @@ function gameSet() {
     }
 }
 
-function decreaseCount() {
-    count--;
-    showNumber();
-}
+// function decreaseCount() {
+//     count--;
+//     showNumber();
+// }
 
 function resetCount() {
     count = 0;
     showNumber();
 }
 
-function increaseCount() {
-    count++;
-    showNumber();
-}
+// function increaseCount() {
+//     count++;
+//     showNumber();
+// }
 
 function showNumber() {
     number.style.color = `rgba(${122 + 5*count},${122 - 8*count},${122 - 5*count})`;
@@ -48,7 +48,31 @@ function showNumber() {
 }
 
 startButton.addEventListener('click', gameStart);
-incButton.addEventListener('click', increaseCount);
-decButton.addEventListener('click', decreaseCount);
+// incButton.addEventListener('click', increaseCount);
+// decButton.addEventListener('click', decreaseCount);
 resetButton.addEventListener('click', resetCount);
 gameSetButton.addEventListener('click', gameSet);
+
+
+let GameBtns = document.getElementsByClassName('game-btn');
+GameBtns = Array.from(GameBtns);
+
+// console.log(GameBtns);
+GameBtns.forEach(button => {
+    // console.log(button);
+    button.addEventListener('click', (event) => {
+        // console.log(event); // 이벤트와 관련된 다양한 정보를 가지고 있는 객체
+        // console.log(event.currentTarget);
+        const curTargetID = event.currentTarget.id;
+        if (curTargetID == 'reset') {
+            count = 0;
+        } else if (curTargetID == 'dec') {
+            count--;
+        } else {
+            count++;
+        }
+
+        showNumber();
+    });
+}); // 화살표 함수를 forEach()의 인자값으로 전달함
+// 그때 전달된 화살표 함수를 콜백 함수(callback function)라고 함

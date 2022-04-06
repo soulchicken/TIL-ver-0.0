@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Counter</title>
     <link rel="stylesheet" href="style.css">
+    <script src="app.js" async></script>
 </head>
 
 <body>
@@ -17,18 +18,16 @@
                 Counter
             </h1>
 
-            <h2 id="start-btn" class="btn">START!</h2>
+            <h2 id="start-btn" class="btn in-game">START!</h2>
             <div id='container-btn in-game'>
-                <h2 id="counting-num" class="hidden"></h2>
-                <button id='dec' class='btn hidden'>DECREASE</button>
-                <button id='reset' class='btn hidden'>RESET</button>
-                <button id='inc' class='btn hidden'>INCREASE</button>
+                <h2 id="counting-num" class="hidden in-game"></h2>
+                <button id='dec' class='btn hidden game-btn'>DECREASE</button>
+                <button id='reset' class='btn hidden game-btn'>RESET</button>
+                <button id='inc' class='btn hidden game-btn'>INCREASE</button>
             </div>
             <button id='end' class='btn hidden'>GAME SET</button>
         </div>
     </main>
-
-    <script src="app.js"></script>
 </body>
 
 </html>
