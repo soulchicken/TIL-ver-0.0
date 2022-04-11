@@ -1,0 +1,43 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+/* reset.css : 기본 css 스타일 초기화 */
+body {
+margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+header, footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: space-between;
+    align-items: center;
+}
+
+.left-header, .right-header, .footer-center {
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.header-item, .footer-item {
+    margin: 0.5rem;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: space-between;
+}
+
+.box {
+    margin: 3rem;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    border: dashed 0.1rem;
+}
+
+.toggle {
+    background-color: transparent;
+}

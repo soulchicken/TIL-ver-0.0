@@ -103,6 +103,7 @@
 
 **알고리즘 스터디**
 - [기초 알고리즘 1](./BootCamp_PlayData/AlgorithmStudy/foundation_1/foundation_1.md)
+- [기초 알고리즘 2](./BootCamp_PlayData/AlgorithmStudy/foundation_2/foundation_2.md)
 <br>
 
 [*Back to Contents*](#contents)
