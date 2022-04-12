@@ -1,0 +1,21 @@
+{
+  "name": "12.papago",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.13.0"
+  },
+  "description": ""
+}
