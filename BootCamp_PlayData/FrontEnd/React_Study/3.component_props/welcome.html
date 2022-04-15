@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Weclome!</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        const root = document.getElementById('root');
+        function Welcome(props) {
+            return <h1>Hello, {props.name}</h1>;
+        }
+
+        // function App(props) {
+        //     return (
+        //         <div>
+        //             <Welcome name="sara" />
+        //             <Welcome name="kim" />
+        //             <Welcome name="lee" />
+        //         </div>
+        //     );
+        // }
+
+        function App(props) {
+            const arr = ['sara','kim','lee'];
+            return (
+                <div>
+                    <Welcome name={arr[0]} />
+                    <Welcome name={arr[1]} />
+                    <Welcome name={arr[2]} />
+                </div>
+            );
+        }
+        const element = <Welcome name="sara" />
+        ReactDOM.render(
+             <App />, root
+        )
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>I Know JSX</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        // babel 을 통한 JSX문법을 사용하기 위함
+
+        
+        // 2. 함수 컴포넌트 방식으로 분리
+        // const root = document.getElementById('root');
+        // let coffee = 'startbucks';
+        // const Component = props => {
+        //     return (
+        //         <ul>
+        //             <h2>Things cats like</h2>
+        //             <li>{coffee} Coffee</li>
+        //             <li>Tea</li>
+        //             <li>Milk</li>
+        //         </ul>
+        //     );
+        // };
+        // ReactDOM.render(<Component />,root);
+
+        function tick() {
+            const element = (
+                <div>
+                <h1>Hello, world!</h1>
+                <h2>It is {new Date().toLocaleTimeString()}.</h2>
+                </div>
+            );
+            ReactDOM.render(element, document.getElementById('root'));
+            }
+
+        setInterval(tick, 1000);
+    </script>
+</body>
+</html>

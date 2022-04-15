@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <title>Counter_REACT!</title>
+</head>
+<body>
+    <div id="root"></div>
+    <button>increase</button>
+    <script>
+        // 커스텀 컴포넌트 만들기 (일반적으로 대문자로 시작)
+        // 함수형 컴포넌트
+        // const Component = function(props) {
+        //     return React.createElement('p',null,`${props.count}`);
+        // }
+
+        // const Component = (props) => {
+        //     return React.createElement('p',null,`${props.count}`);
+        // };
+
+        const Component = props => React.createElement('p',null,`${props.count}`);
+
+
+        // 초기 랜더링
+        ReactDOM.render(React.createElement(Component, {count: 0}, null), document.getElementById('root'));
+        // 랜더링할 것, 랜더링할 곳
+
+        let i = 0; // 클릭 이벤트 발생에 따라 Re-Rendering
+        const button = document.querySelector('button');
+        button.addEventListener('click', () => {
+            ReactDOM.render(React.createElement(Component, {count: ++i}), document.getElementById('root'))
+        });
+    </script>
+</body>
+</html>

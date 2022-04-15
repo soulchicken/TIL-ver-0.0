@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Control</title>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>    
+
+    <script type="text/babel">
+        const {useState} = React; // import useState hook
+        const ROOT = document.getElementById('root');
+        // 온도를 입력할 수 있는 input 엘리먼트 보유
+        // 그 값을 temperature 라고 하는 state에 저장하는 컴포넌트
+        const Calculator = (props) => {
+            const [state, setState] = useState({ temperature : '' });
+            const changeHandler = (event) => {
+                setState({temperature: event.target.value});
+            }
+            return (
+                <fieldset>
+                    <legend>섭씨 온도를 입력하세요 :</legend>
+                    <input type="text" onChange={changeHandler}/>
+                    <BoilingVerdict temperature= {state.temperature}/>
+                </fieldset>
+            );
+        }
+        // 입력한 값이 끓는 점 온도인지에 따라 출력문을 분기하는 컴포넌트
+        const BoilingVerdict = (props) => {
+            // celsius : 섭씨
+            const celsius = props.temperature;
+            return celsius >= 100 ? <p>물이 끓는 점 입니다.</p> : <p>끓는점이 아직 아닙니다.</p>
+        }
+        ReactDOM.render(<Calculator />, ROOT);
+    </script>
+</body>
+</html>

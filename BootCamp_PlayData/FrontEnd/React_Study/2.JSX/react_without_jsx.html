@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <title>I don't Know JSX</title>
+</head>
+<body>
+    <ul>
+        <!-- <h2>Things cats like</h2>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li> -->
+    </ul>
+    <div id="root">
+
+    </div>
+    <script>
+        // const root = document.getElementById('root');
+        // const H2 = React.createElement('h2',null,'Things cats like');
+        // const Coffee = React.createElement('li',null,'Coffee');
+        // const Tea = React.createElement('li',null,'Tea');
+        // const Milk = React.createElement('li',null,'Milk');
+        // const UL = React.createElement('ul',null,H2,Coffee,Tea,Milk);
+        // ReactDOM.render(UL, root);
+
+        const Component = props => {
+            return React.createElement('ul',null,
+                        React.createElement('h2', null,'Things cats like'),
+                        React.createElement('li', null,'Coffee'),
+                        React.createElement('li', null,'Tea'),
+                        React.createElement('li', null,'Milk'),);
+        }
+        ReactDOM.render(React.createElement(Component,null,null), document.getElementById('root'));
+    </script>
+</body>
+</html>

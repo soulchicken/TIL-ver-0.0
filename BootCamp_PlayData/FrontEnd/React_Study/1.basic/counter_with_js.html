@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COUNTER</title>
+</head>
+<body>
+    <!-- 앞으로 우리가 작성할 react code(app)는
+    아래 root <div>에 랜더링 될 것 -->
+    <div id="root"></div>
+    <button class="btn">Increase</button>
+    <script>
+        // Vanilla JS
+        // id가 root인 엘리먼트 내부에 <p>count</p>가 생김
+        // === 계속 덮어 씌움 (갱신)
+        // let count = -1;
+        // const root = document.getElementById('root');
+        // const btn = document.getElementsByClassName('btn')[0];
+        // function clickBtn() {
+        //     count++;
+        //     root.innerHTML = `<p>${count}</p>`;
+        // }
+        // btn.addEventListener('click', clickBtn);
+        // clickBtn();
+
+        const component = {
+            count : 0,
+            updateElement() {
+                return `<p>${this.count}</p>`
+            }
+        }
+
+        function render(component, element) {
+            element.innerHTML = component.updateElement();
+        }
+
+
+        console.log('초기화면 랜더링');
+        const rootElement = document.getElementById('root')
+        render(component,rootElement);
+
+        const button = document.querySelector('button');
+        button.addEventListener('click', ()=>{
+            // 특정 이벤트(button click)에 의해
+            // component 값(count)의 상태(state)가 바뀌면
+            // 바뀐 상태 값으로 다시 rendering
+            component.count++;
+            render(component,rootElement);
+        })
+    </script>
+</body>
+</html>
