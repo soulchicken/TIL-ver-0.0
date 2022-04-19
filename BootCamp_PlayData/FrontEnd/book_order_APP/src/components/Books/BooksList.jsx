@@ -52,7 +52,7 @@ const BooksList = () => {
     // );  
     // 별도의 <li> 컴포넌트로 분리
     const booksList = books.map(book => (
-        <Book key={book.id} name={book.name} description={book.description} price={book.price}/>
+        <Book key={book.id} name={book.name} description={book.description} author={book.author} price={book.price}/>
     ));
   return (
       <section className={classes.books}>

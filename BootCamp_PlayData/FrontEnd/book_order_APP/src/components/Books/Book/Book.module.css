@@ -1,3 +1,4 @@
+
 .book {
     display: flex;
     justify-content: center;
@@ -6,15 +7,20 @@
     border-bottom: 1px solid #ccc;
 }
 
+.book__info {
+    width: 100%;
+}
+
 .book h3 {
-    margin: 0 0 0.25rem 0;
+    margin: 0 0 0.25rem 0; /* 상, 우, 하, 좌 (시계방향)*/
+}
+
+.author {
+    font-size: 1rem;
 }
 
 .description {
     font-style: italic;
-    text-align: left;
-    word-break: break-all;
-    word-wrap: break-word;
 }
 
 .price {
