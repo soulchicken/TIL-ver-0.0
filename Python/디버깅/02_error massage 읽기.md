@@ -73,3 +73,75 @@ syntaxError : invalid syntax
 - 컴퓨터가 이해할 수 없는 코드라는 의미.
 - 이 에러메시지엔 Traceback이 없다. 컴퓨터는 이 코드의 논리를 알 수 없기 때문.
 
+## 2.2. Name error
+- 변수 이름, 함수 이름을 오타로 생기는 에러
+- 예시 코드 : 4번째 줄에 number를 numbre로 오타
+
+```py
+def add_all(numbers):
+    result = 0
+    for number in numbers:
+        result += numbre
+    return result
+add_all([1,2,3])
+```
+
+- 위 소스 코드는 아래와 같은 에러메시지를 출력한다.
+
+```
+Traceback (most recent call last):
+  File "C:/Users/SOULFEVER/Desktop/1.py", line 6, in <module>
+    add_all([1,2,3])
+  File "C:/Users/SOULFEVER/Desktop/1.py", line 4, in add_all
+    result += numbre
+NameError: name 'numbre' is not defined
+```
+
+- `NameError: name 'numbre' is not defined` : 정의한 적 없는 `numbre` 라는 변수가 나왔어요! 라는 뜻
+
+## 2.3. Type error
+
+### 2.3.1. 타입 에러 예시 1
+- 예시 코드 : 숫자 + 문자열 연산으로 에러 발생
+```py
+def add_all(numbers):
+    result = 0
+    for number in numbers:
+        result += number
+    return result
+add_all(['a','a','b'])
+```
+
+- 위 소스 코드는 아래와 같은 에러메시지를 출력한다.
+
+```
+Traceback (most recent call last):
+  File "C:/Users/SOULFEVER/Desktop/1.py", line 6, in <module>
+    add_all(['a','a','b'])
+  File "C:/Users/SOULFEVER/Desktop/1.py", line 4, in add_all
+    result += number
+TypeError: unsupported operand type(s) for +=: 'int' and 'str'
+```
+
+- `TypeError: unsupported operand type(s) for +=: 'int' and 'str'`
+    - 다른 타입의 변수가 더해져서 생긴 문제다. 라는 뜻.
+
+### 2.3.2. 타입 에러 예시 2
+- 예시 코드 : 숫자 + 문자열 연산으로 에러 발생
+```py
+def usd_to_krw(price):
+    price_in_krw = price * 100
+    return price_in_krw + ' won'
+usd_to_krw(4.99)
+```
+
+- 위 소스 코드는 아래와 같은 에러메시지를 출력한다.
+
+```
+Traceback (most recent call last):
+  File "C:/Users/SOULFEVER/Desktop/1.py", line 4, in <module>
+    usd_to_krw(4.99)
+  File "C:/Users/SOULFEVER/Desktop/1.py", line 3, in usd_to_krw
+    return price_in_krw + ' won'
+TypeError: unsupported operand type(s) for +: 'float' and 'str'
+```
