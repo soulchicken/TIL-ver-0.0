@@ -145,3 +145,94 @@ Traceback (most recent call last):
     return price_in_krw + ' won'
 TypeError: unsupported operand type(s) for +: 'float' and 'str'
 ```
+
+## 2.4. Index error
+- 인덱스 범위에서 벗어나는 요소를 불러오려고 하면 생기는 에러
+
+```py
+def first_character(string):
+    return string[0]
+first_character("")
+```
+
+- 위 소스 코드는 아래와 같은 에러메시지를 출력한다.
+
+```
+Traceback (most recent call last):
+  File "/Users/soulfever/Documents/solved/1.py", line 3, in <module>
+    first_character("")
+  File "/Users/soulfever/Documents/solved/1.py", line 2, in first_character
+    return string[0]
+IndexError: string index out of range
+```
+- `IndexError: string index out of range` : 인덱스 범위를 넘어갔어! 라는 의미
+
+
+## 2.5. Zero division error
+- 수를 0으로 나누려고 할 때 발생하는 에러
+
+```py
+def average(numbers):
+    return sum(numbers) / len(numbers)
+average([])
+```
+
+- 위 소스 코드는 아래와 같은 에러메시지를 출력한다.
+
+```
+Traceback (most recent call last):
+  File "/Users/soulfever/Documents/solved/1.py", line 3, in <module>
+    average([])
+  File "/Users/soulfever/Documents/solved/1.py", line 2, in average
+    return sum(numbers) / len(numbers)
+ZeroDivisionError: division by zero
+```
+- `ZeroDivisionError: division by zero` : 0으로는 나눌 수 없어! 라는 뜻
+
+## 2.6. Import error
+- 모듈, 패키지 import를 잘못했을 때 생기는 에러
+
+```py
+from math import squareroot
+print(squareroot(4)) # 2.0 ??
+```
+
+- 위 소스 코드는 아래와 같은 에러메시지를 출력한다.
+
+```
+Traceback (most recent call last):
+  File "/Users/soulfever/Documents/solved/1.py", line 1, in <module>
+    from math import squareroot
+ImportError: cannot import name 'squareroot' from 'math' (/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/lib-dynload/math.cpython-310-darwin.so)
+```
+- `ImportError: cannot import name 'squareroot' from 'math'` : `math`에서 `squareroot`를 찾을 수 없어! 라는 뜻.
+- 제곱근 함수의 이름 : `sqrt`.
+
+
+## 2.7. Recursion error
+- 재귀함수에서 나타나는 에러.
+- 아래 코드에서 문제점 : 4 + 3 + 2 + 1 + 0 + (-1) + (-2) + (-3) + .........
+
+```py
+def sum_to(n):
+    return n + sum_to(n-1)
+sum_to(4)
+```
+
+- 위 소스 코드는 아래와 같은 에러메시지를 출력한다.
+
+```
+Traceback (most recent call last):
+  File "/Users/soulfever/Documents/solved/1.py", line 3, in <module>
+    sum_to(4)
+  File "/Users/soulfever/Documents/solved/1.py", line 2, in sum_to
+    return n + sum_to(n-1)
+  File "/Users/soulfever/Documents/solved/1.py", line 2, in sum_to
+    return n + sum_to(n-1)
+  File "/Users/soulfever/Documents/solved/1.py", line 2, in sum_to
+    return n + sum_to(n-1)
+  [Previous line repeated 1022 more times]
+RecursionError: maximum recursion depth exceeded
+```
+- `[Previous line repeated 1022 more times]` : 저 라인을 난 1022번 반복했어. (왜 재귀가 안끝나니?) 라는 뜻
+- `RecursionError: maximum recursion depth exceeded` : 최대 재귀 깊이(안고 있을 수 있는 재귀함수의 양)를 넘겼어. 라는 뜻
