@@ -32,7 +32,8 @@
 
 ### FrontEnd
 **JavaScript**
-- [NomadCoder - CloneCoding (Chrome app)](./cloneCode_Momentum)
+- [NomadCoder - TodoApp Mission (GitPage)](https://soulchicken.github.io/todo-app/)
+- [NomadCoder - TodoApp Mission (Repo)](https://github.com/soulchicken/todo-app)
 
 <br>
 
@@ -85,25 +86,22 @@
 <hr />
 
 ### BootCamp - PlayData
-**HTML**
-- [부트캠프 수업 정리 (22.03.28)](./BootCamp_PlayData/FrontEnd/220328_01_HTML.md) : HTML 전체적으로 훑은 날
-
-**CSS**
-- [부트캠프 수업 정리 (22.03.28)](./BootCamp_PlayData/FrontEnd/220328_02_CSS.md) : CSS 전체적으로 훑은 날
-- [부트캠프 수업 정리 (22.03.29)](./BootCamp_PlayData/FrontEnd/220329_01_CSS.md) : 박스모델링, float, flex가 기억에 남는 날
-
-**JavaScript**
-- [부트캠프 수업 정리 (22.03.30)](./BootCamp_PlayData/FrontEnd/220330_01_JS.md) : 변수 선언부터 반복문, 조건문까지
-- [부트캠프 수업 정리 (22.03.31)](./BootCamp_PlayData/FrontEnd/220331_01_JS.md) : 함수, 배열, 문자열 등등 날
-- [부트캠프 수업 정리 (22.04.01)](./BootCamp_PlayData/FrontEnd/220401_01_JS.md) : 객체, 이벤트, DOM 심화
-- [부트캠프 수업 정리 (22.04.04)](./BootCamp_PlayData/FrontEnd/220404_01_JS.md) : 새로운 강사님. 먼가 업그레이드 된 듯한 자바스크립트
-- [부트캠프 수업 정리 (22.04.05)](./BootCamp_PlayData/FrontEnd/220405_01_JS.md) : 자바스크립트가 정말 많이 익숙해지고 있다.
+**FrontEnd**
+- [부트캠프 수업 정리 흔적 - 프론트엔드](./BootCamp_PlayData/FrontEnd)
 - [미니 프로젝트 - Counter 설명서](https://github.com/soulchicken/WEB_collection#readme) : 미니프로젝트 Readme 작성
-- [미니 프로젝트 - Counter 링크 (22.04.05)](https://soulchicken.github.io/WEB_collection/) : 미니 프로젝트. 난잡하게 만드는 것보다 심플하게 만드는 것이 이쁘다.
+- [미니 프로젝트 - Counter 링크](https://soulchicken.github.io/WEB_collection/) : 미니 프로젝트. 난잡하게 만드는 것보다 심플하게 만드는 것이 이쁘다.
+- [미니 프로젝트 - 파파고 API 활용하기](./BootCamp_PlayData/FrontEnd/PAPAGO_API_STUDY/) : API 사용해보기, Node 서버 사용해보기 등 안해본 것이 많았다.
+- [팀 프로젝트 - Movie App](https://github.com/soulchicken/todo-app) : 첫 팀작업. react로 싱글 페이지를 구현했다.
+
+**BackEnd**
+- [부트캠프 수업 정리 흔적 - 백엔드](./BootCamp_PlayData/BackEnd)
 
 **알고리즘 스터디**
 - [기초 알고리즘 1](./BootCamp_PlayData/AlgorithmStudy/foundation_1/foundation_1.md)
 - [기초 알고리즘 2](./BootCamp_PlayData/AlgorithmStudy/foundation_2/foundation_2.md)
+- [스택 & 큐](./BootCamp_PlayData/AlgorithmStudy/1week_stack_queue/StackAndQueue.md)
+- [완전탐색 & 이분탐색](./BootCamp_PlayData/AlgorithmStudy/2week_bruteforce_binarysearch/BruteForceAndBinarySearch.md)
+
 <br>
 
 [*Back to Contents*](#contents)
