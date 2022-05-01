@@ -1,25 +1,25 @@
-import Button from "./Button";
-import styles from "./App.module.css"
 import { useState, useEffect } from "react";
+
 function App() {
-  const [counter, setCounter] = useState(0);
-  const [keyword, setKeyword] = useState("");
-  const onClick = () => setCounter((prev) => prev + 1);
-  const onChange = (event) => setKeyword(event.target.value);
-  console.log("I run all the time");
-  const iRunOnlyOnce = () => {
-    console.log("I run only Once!");
+  const [toDo, setToDo] = useState("");
+  const [toDos, setToDos] = useState([]);
+  const onChange = (event) => setToDo(event.target.value);
+  const onSubmit = (event) => {
+    event.preventDefault();
+    if (toDo ==="") {
+      return;
+    }
+    setToDo("");
+    setToDos(currentArray => [toDo, ...currentArray]);
   }
-  useEffect(() => {
-    console.log("CALL THE API...");
-  },[]);
+
   return (
-    <div className="App">
-      <input value={keyword} onChange={onChange} type="text" placeholder="Search here..." />
-      <header className="App-header">
-        <h1 className={styles.title}>{counter}</h1>
-        <button onClick={onClick}>click me</button>
-      </header>
+    <div>
+      <h1>My To Dos ({toDos.length})</h1>
+      <form onSubmit={onSubmit}>
+        <input onChange={onChange} value={toDo} type="text" placehoder="Write your to do ..."/>
+        <button>Add To Do</button>
+      </form>
     </div>
   );
 }
