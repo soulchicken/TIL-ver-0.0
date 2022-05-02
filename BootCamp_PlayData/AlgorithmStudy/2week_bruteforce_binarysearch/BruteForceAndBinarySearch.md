@@ -1,4 +1,5 @@
-# 1 Week - Stack & Queue
+# 2 Week - Brute Force & Binary Search
+
 - [내용 정리](./Summary.md)
 - 문제풀이
     - [모의고사](https://programmers.co.kr/learn/courses/30/lessons/42840?language=python3)
