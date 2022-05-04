@@ -101,6 +101,7 @@
 - [기초 알고리즘 2](./BootCamp_PlayData/AlgorithmStudy/foundation_2/foundation_2.md)
 - [스택 & 큐](./BootCamp_PlayData/AlgorithmStudy/1week_stack_queue/StackAndQueue.md)
 - [완전탐색 & 이분탐색](./BootCamp_PlayData/AlgorithmStudy/2week_bruteforce_binarysearch/BruteForceAndBinarySearch.md)
+- [DFS & DFS](./BootCamp_PlayData/AlgorithmStudy/3week_DFS_BFS/DFSandBFS.md)
 
 <br>
 
