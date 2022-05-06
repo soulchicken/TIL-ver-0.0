@@ -16,6 +16,9 @@
 - npm install {패키지명} or npm i {패키지명}
 - ex) `npm i express` : express 받아오기
 
+### package.json만 있는 상태에서 전체 패키지 받기
+- `npm install` or `npm i`
+
 ## JS 파일 터미널에서 실행하기
 - `node 파일명.js` 
     - 해당 경로의 index.js 파일 내용이 `console.log("Hi!")`이고,   
