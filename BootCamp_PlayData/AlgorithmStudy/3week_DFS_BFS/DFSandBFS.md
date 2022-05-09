@@ -1,4 +1,4 @@
-# 2 Week - DFS & BFS
+# 3 Week - DFS & BFS
 - [내용 정리](./Summary.md)
 - 문제풀이
     - [DFS와 BFS](https://www.acmicpc.net/problem/1260)
