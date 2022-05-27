@@ -1,0 +1,30 @@
+-- Student 테이블 DDL
+CREATE TABLE STUDENT (
+    STUDENT_ID INT(5) unsigned NOT NULL AUTO_INCREMENT,
+    MAJOR_ID INT(5) unsigned,
+    STUDENT_NAME VARCHAR(20),
+    PRIMARY KEY (STUDENT_ID)
+);
+
+-- Major 테이블 DDL
+CREATE TABLE MAJOR(
+    MAJOR_ID INT(5) unsigned NOT NULL AUTO_INCREMENT,
+    MAJOR_NAME VARCHAR(20),
+    PRIMARY KEY (MAJOR_ID)
+);
+
+-- 외래키 매핑 SQL
+ALTER TABLE STUDENT
+ADD CONSTRAINT FK_STUDENT_MAJOR
+FOREIGN KEY (MAJOR_ID)
+REFERENCES MAJOR(MAJOR_ID);
+
+-- 학과 데이터 삽입
+INSERT INTO MAJOR(MAJOR_NAME) VALUES ("CS"); -- "CS" 라는 전공 데이터 1개 삽입
+
+-- 두 명의 학생 데이터 삽입, 1은 Major 테이블의 첫 번째 id(CS)
+INSERT INTO STUDENT(MAJOR_ID, STUDENT_NAME) VALUES (1, "Yoo");
+INSERT INTO STUDENT(MAJOR_ID, STUDENT_NAME) VALUES (1, "Kang");
+
+// JOIN SQL으로 조회
+SELECT m.*, s.student_name FROM student as s JOIN major as m ON s.major_id = m.major_id;
