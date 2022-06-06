@@ -34,10 +34,10 @@ for i in range(2,n+1):
 
 ### 3. N으로 표현
 1. n개의 수를 사용했을 때의 수를 저장할 리스트를 미리 만든다. : `li = [[] for _ in range(8+1)]`, 최대 8회 반복하므로 리스트는 9개 (0번까지 해서)
+2. for문으로 1번 라인부터 9번라인까지 (숫자를 1개만 쓴 시점부터, 9번 쓴 시점까지) 확인한다.
+    - 만약 k번 수를 사용했다면, k-1, 1번 사용한 수 들을 사칙연산 비교하고, k-2,2번 사용한 수들을 사칙연산 비교하고.... 를 반복한다.
 
-li = [[] for _ in range(8+1)]
-if N == number:
-    return 1
+```py
 for n in range(1,9):
     a = int(str(N)*n)
     if a == number:
@@ -53,5 +53,5 @@ for n in range(1,9):
                 if number in arr:
                     return n
                 li[n].extend(arr)
-
 return -1
+```
