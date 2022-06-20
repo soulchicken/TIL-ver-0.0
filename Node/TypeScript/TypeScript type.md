@@ -63,3 +63,18 @@ const playerMaker = (name:string) : Player => {
 const hyun = playerMaker("현");
 hyun.age = 13;
 ```
+
+## readonly. 요소를 읽기 전용으로
+```ts
+type Player = {
+    readonly name:Name
+    age?:Age
+}
+```
+- 위에 코드처럼 읽기전용으로 name을 설정하면 name 변수는 변경할 수 없다
+
+```ts
+const numbers: readonly number[] = [1,2,3,4]
+numbers.push(1) // 에러 발생
+```
+
